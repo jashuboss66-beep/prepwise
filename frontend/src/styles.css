@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --canvas: #f5f3ed;
+  --surface: #fffefa;
+  --surface-soft: #f0eee7;
+  --line: #e4e0d6;
+  --ink: #252923;
+  --muted: #72766f;
+  --forest: #315c43;
+  --forest-deep: #244532;
+  --forest-soft: #e8eee7;
+  --sage: #a5a58d;
+  --sage-soft: #eeeee4;
+  --amber: #c18a43;
+  --amber-soft: #f6efdf;
+  --amber-ink: #795a2c;
+  --danger: #a24d45;
+  --danger-soft: #f7eae7;
+}
+
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --color-slate-50: #faf9f5;
+  --color-slate-100: #f0eee7;
+  --color-slate-200: #e4e0d6;
+  --color-slate-300: #d1cdc1;
+  --color-slate-400: #aaa99f;
+  --color-slate-500: #85867d;
+  --color-slate-600: #696d66;
+  --color-slate-700: #4d534c;
+  --color-slate-800: #343a34;
+  --color-slate-900: #252923;
+  --color-slate-950: #191c19;
+
+  --color-indigo-50: #e8eee7;
+  --color-indigo-100: #d8e3d7;
+  --color-indigo-200: #becfbe;
+  --color-indigo-300: #a5b59f;
+  --color-indigo-400: #78947d;
+  --color-indigo-500: #52785b;
+  --color-indigo-600: #315c43;
+  --color-indigo-700: #284b37;
+  --color-indigo-800: #213e2e;
+  --color-indigo-900: #192f23;
+  --color-indigo-950: #14271c;
+
+  --color-blue-50: #e8eee7;
+  --color-blue-100: #d8e3d7;
+  --color-blue-200: #becfbe;
+  --color-blue-300: #a5b59f;
+  --color-blue-400: #78947d;
+  --color-blue-500: #52785b;
+  --color-blue-600: #315c43;
+  --color-blue-700: #284b37;
+  --color-blue-800: #213e2e;
+  --color-blue-900: #192f23;
+  --color-blue-950: #14271c;
+
+  --color-violet-50: #eeeee4;
+  --color-violet-100: #e1e2d4;
+  --color-violet-200: #c9cbb5;
+  --color-violet-300: #b2b49b;
+  --color-violet-400: #969982;
+  --color-violet-500: #777d68;
+  --color-violet-600: #5e6953;
+  --color-violet-700: #4a5743;
+  --color-violet-800: #3a4738;
+  --color-violet-900: #2d392e;
+  --color-violet-950: #1f2921;
+
+  --color-amber-50: #f6efdf;
+  --color-amber-100: #efe2c6;
+  --color-amber-200: #dfc99d;
+  --color-amber-300: #d0ad6f;
+  --color-amber-400: #c18a43;
+  --color-amber-500: #ad7536;
+  --color-amber-600: #93612f;
+  --color-amber-700: #79552e;
+  --color-amber-800: #63472a;
+  --color-amber-900: #533b25;
+  --color-amber-950: #302117;
+
+  --color-emerald-50: #e8eee7;
+  --color-emerald-100: #d8e3d7;
+  --color-emerald-200: #becfbe;
+  --color-emerald-300: #a5b59f;
+  --color-emerald-400: #78947d;
+  --color-emerald-500: #52785b;
+  --color-emerald-600: #315c43;
+  --color-emerald-700: #284b37;
+  --color-emerald-800: #213e2e;
+  --color-emerald-900: #192f23;
+  --color-emerald-950: #14271c;
+
+  --color-rose-50: #f7eae7;
+  --color-rose-100: #f0dad5;
+  --color-rose-200: #dfbdb5;
+  --color-rose-300: #cb9a90;
+  --color-rose-400: #b8786d;
+  --color-rose-500: #a85f55;
+  --color-rose-600: #a24d45;
+  --color-rose-700: #8d423b;
+  --color-rose-800: #713832;
+  --color-rose-900: #5b302c;
+  --color-rose-950: #351b19;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+.field { width: 100%; border: 1px solid var(--line); border-radius: .65rem; background: var(--surface); color: var(--ink); padding: .75rem .875rem; outline: none; transition: border-color .16s ease, box-shadow .16s ease, background .16s ease; }
+.field::placeholder { color: #9a9a90; }
+.field:focus { border-color: var(--forest); box-shadow: 0 0 0 3px rgb(49 92 67 / 12%); }
+.app-scrollbar { scrollbar-color: #d2d0c6 transparent; scrollbar-width: thin; }
+::selection { background: #d8e3d7; color: var(--forest-deep); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
